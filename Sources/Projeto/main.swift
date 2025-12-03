@@ -106,8 +106,5 @@ class PlanoAnual: Plano{
     }
 }
 
-let plano: Plano = PlanoAnual()
-let aluno: Aluno = Aluno(nome:"Pedro", email:"pedro@gmail.com", matricula:"SM23", plano:plano)
 
-print(aluno.plano)
 
