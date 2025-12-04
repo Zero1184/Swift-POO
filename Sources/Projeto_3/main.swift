@@ -24,22 +24,24 @@ class Academia {
     func contratarInstrutor(_ instrutor: Instrutor){
         self.intrutoresContratados[instrutor.email] = instrutor
     }
+
+    
+    func matricularAluno(_ aluno: Aluno){
+        if !self.alunosInscritos.keys.contains(aluno.matricula){
+                    alunosInscritos[aluno.matricula] = aluno
+                    print("Aluno registrado com sucesso!")
+        } else{
+            print("Erro: Aluno já matriculado")
+        }
+    }
+
+    override func matricularAluno(nome: String, email: String, matricula: String, plano: Plano) -> Aluno{
+        let novoAluno = Aluno(nome: nome, email: email, matricula: matricula, plano: plano)
+        self.matricularAluno(novoAluno)
+        return novoAluno
+    }
+
     }
 }
 
-
-override func matricularAluno(_ aluno: Aluno){
-    if !self.alunosInscritos.keys.contains(aluno.matricula){
-                alunosInscritos[aluno.matricula] = aluno
-                print("Aluno registrado com sucesso!")
-    } else{
-        print("Erro: Aluno já matriculado")
-    }
-}
-
-override func matricularAluno(nome: String, email: String, matricula: String, plano: Plano) -> Aluno{
-    let novoAluno = Aluno(nome: nome, email: email, matricula: matricula, plano: plano)
-    self.matricularAluno(novoAluno)
-    return novoAluno
-}
 
