@@ -62,7 +62,7 @@ class Instrutor: Pessoa{
         super.init(nome: nome, email: email)
     }
     
-    // Sobreescrita da função retorn nome, emial e especialidade
+    // Sobreescrita da função retorna nome, email e especialidade
     override func getDescricao() {
         print("""
         Nome: \(nome)
@@ -91,7 +91,7 @@ class Plano {
         self.tipo = tipo
     }
 
-    // obter o nome do plano
+    // Obter o nome do plano
     func obterNome() -> String {
         switch self.tipo {
         case .mensal:
@@ -103,7 +103,7 @@ class Plano {
         }
     }
 
-    // calcular a mensalidade
+    // Calcular a mensalidade
     func calcularMensalidade() {
         switch self.tipo {
         case .mensal:
