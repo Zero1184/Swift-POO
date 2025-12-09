@@ -141,7 +141,7 @@ class Aparelho: Manutencao{
         self.dataUltimaManutencao = "---Nenhuma manutenção realizada!"
     }
 
-    // Função retorna booleano a depender se a manutenção foi bem sucessida (true) ou não (false)
+    // Realiza a manutencao
     func realizarManutencao(){
 
         // Atualiza a data de manutenção para a data atual
